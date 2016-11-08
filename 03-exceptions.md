@@ -9,6 +9,7 @@ minutes: 10
 > 
 > *   Understand that exceptions are effectively specialized runtime tests
 > *   Learn when to use exceptions and what exceptions are available
+> *   Recognize the differences between exceptions and assertions
 
 Exceptions are more sophisticated than assertions. They are the standard error 
 messaging system in most modern programming languages.  Fundamentally, when an 
@@ -85,3 +86,12 @@ def mean(num_list):
 Exceptions have the advantage of being simple to include and powerfully helpful
 to the user. However, not all behaviors can or should be found with runtime
 exceptions. Most behaviors should be validated with unit tests.
+
+> ## Exceptions vs. Assertions {.callout}
+>  
+> _Assertions_ can be thought of as your internal checks (as the developer) 
+> to make sure that your program is behaving how you would like it to. When you are writing tests for your own software, you should use _assertions_. 
+>
+> _Exceptions_ can be thought of messages that you would like the actual user of your program to let them know that the program behavior is incorrect (e.g. because their input was not correctly formatted). 
+> A helpful mnemonic is that _Exceptions_ are _external_. 
+

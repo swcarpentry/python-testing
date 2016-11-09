@@ -34,9 +34,9 @@
 </div>
 <div class="panel-body">
 <ul>
-<li>Understand that exceptions are effectively specialized runtime tests</li>
-<li>Learn when to use exceptions and what exceptions are available</li>
-<li>Recognize the differences between exceptions and assertions</li>
+<li>Learner will understand that exceptions are specialized runtime tests</li>
+<li>Learner will recognizes scenarios when to use exceptions and what exceptions are available</li>
+<li>Learner will recognize when to use exceptions as opposed to assertions</li>
 </ul>
 </div>
 </section>
@@ -47,7 +47,7 @@
       <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="st">&quot;The algebraic mean of an empty list is undefined. Please provide a list of numbers&quot;</span>)
     <span class="cf">else</span> :
       <span class="cf">return</span> <span class="bu">sum</span>(num_list)<span class="op">/</span><span class="bu">len</span>(num_list)</code></pre></div>
-<p>Once an exception is raised, it will be passed upward in the program scope. An exception be used to trigger additional error messages or an alternative behavior. rather than immediately halting code execution, the exception can be ‘caught’ upstream with a try-except block. When wrapped in a try-except block, the exception can be intercepted before it reaches global scope and halts execution.</p>
+<p>Once an exception is raised, it will be passed upward in the program scope. An exception can be used to trigger additional error messages or an alternative behavior. Rather than immediately halting code execution, the exception can be ‘caught’ upstream with a try-except block. When wrapped in a try-except block, the exception can be intercepted before it reaches global scope and halts execution.</p>
 <p>To add information or replace the message before it is passed upstream, the try-catch block can be used to catch-and-reraise the exception:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> mean(num_list):
     <span class="cf">try</span>:
@@ -97,8 +97,11 @@
 <h2 id="exceptions-vs.assertions"><span class="glyphicon glyphicon-pushpin"></span>Exceptions vs. Assertions</h2>
 </div>
 <div class="panel-body">
-<p><em>Assertions</em> can be thought of as your internal checks (as the developer) to make sure that your program is behaving how you would like it to. When you are writing tests for your own software, you should use <em>assertions</em>.</p>
-<p><em>Exceptions</em> can be thought of messages that you would like the actual user of your program to let them know that the program behavior is incorrect (e.g. because their input was not correctly formatted). A helpful mnemonic is that <em>Exceptions</em> are <em>external</em>.</p>
+<p>To resolve any possible confusion on when to use assertions as opposed to exceptions, we would like to make the following points.</p>
+<ol style="list-style-type: decimal">
+<li><p><em>Assertions</em> can be thought of as your internal checks (as the developer) to make sure that your program is behaving how you would like it to. When you are writing unit tests for your own software, you should use <em>assertions</em> in those tests since the user will likely not see the tests.</p></li>
+<li><p><em>Exceptions</em> can be thought of as messages that you would like the actual user of your program to see to let them know that the program behavior is incorrect (e.g. because their input was not correctly formatted) or to trigger alternative program behaviors. Two particular cases where exceptions are useful is when there is a program failure, and when there are special results or cases that need to be handled. A helpful mnemonic is that <em>Exceptions</em> are <em>external</em>.</p></li>
+</ol>
 </div>
 </aside>
         </div>

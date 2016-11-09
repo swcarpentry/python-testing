@@ -7,9 +7,9 @@ minutes: 10
 
 > ## Learning Objectives {.objectives}
 > 
-> *   Understand that exceptions are effectively specialized runtime tests
-> *   Learn when to use exceptions and what exceptions are available
-> *   Recognize the differences between exceptions and assertions
+> *   Learner will understand that exceptions are specialized runtime tests
+> *   Learner will recognizes scenarios when to use exceptions and what exceptions are available
+> *   Learner will recognize when to use exceptions as opposed to assertions
 
 Exceptions are more sophisticated than assertions. They are the standard error 
 messaging system in most modern programming languages.  Fundamentally, when an 
@@ -27,14 +27,12 @@ def mean(num_list):
 ~~~
 
 Once an exception is raised, it will be passed upward in the program scope.
-An exception be used to trigger additional error messages or an alternative
-behavior. rather than immediately halting code
+An exception can be used to trigger additional error messages or an alternative
+behavior. Rather than immediately halting code
 execution, the exception can be 'caught' upstream with a try-except block.
-When wrapped in a try-except block, the exception can be intercepted before it reaches
-global scope and halts execution.
+When wrapped in a try-except block, the exception can be intercepted before it reaches global scope and halts execution.
 
-To add information or replace the message before it is passed upstream, the try-catch
-block can be used to catch-and-reraise the exception:
+To add information or replace the message before it is passed upstream, the try-catch block can be used to catch-and-reraise the exception:
 
 ~~~ {.python}
 def mean(num_list):
@@ -48,7 +46,6 @@ def mean(num_list):
 Alternatively, the exception can simply be handled intelligently. If an
 alternative behavior is preferred, the exception can be disregarded and a
 responsive behavior can be implemented like so:
-
 
 ~~~ {.python}
 def mean(num_list):
@@ -88,10 +85,11 @@ to the user. However, not all behaviors can or should be found with runtime
 exceptions. Most behaviors should be validated with unit tests.
 
 > ## Exceptions vs. Assertions {.callout}
+>  To resolve any possible confusion on when to use assertions as opposed to exceptions, we would like to make the following points. 
 >  
-> _Assertions_ can be thought of as your internal checks (as the developer) 
-> to make sure that your program is behaving how you would like it to. When you are writing tests for your own software, you should use _assertions_. 
+> 1. _Assertions_ can be thought of as your internal checks (as the developer) 
+> to make sure that your program is behaving how you would like it to. When you are writing unit tests for your own software, you should use _assertions_ in those tests since the user will likely not see the tests.
 >
-> _Exceptions_ can be thought of messages that you would like the actual user of your program to let them know that the program behavior is incorrect (e.g. because their input was not correctly formatted). 
+> 2. _Exceptions_ can be thought of as messages that you would like the actual user of your program to see to let them know that the program behavior is incorrect (e.g. because their input was not correctly formatted) or to trigger alternative program behaviors. Two particular cases where exceptions are useful is when there is a program failure, and when there are special results or cases that need to be handled.
 > A helpful mnemonic is that _Exceptions_ are _external_. 
 

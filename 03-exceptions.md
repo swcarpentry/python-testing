@@ -8,7 +8,7 @@ minutes: 10
 > ## Learning Objectives {.objectives}
 > 
 > *   Learner will understand that exceptions are specialized runtime tests
-> *   Learner will recognizes scenarios when to use exceptions and what exceptions are available
+> *   Learner will recognize scenarios when to use exceptions and what exceptions are available
 > *   Learner will recognize when to use exceptions as opposed to assertions
 
 Exceptions are more sophisticated than assertions. They are the standard error 
